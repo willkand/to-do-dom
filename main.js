@@ -11,12 +11,11 @@ let toDoList = document.querySelector("#to-DoList");
 
 //buttons
 let addButton = document.querySelector("#addButton");
+let editButton = document.querySelector("#editButton")
 let deleteButton = document.querySelector("#deleteButton");
 let clearAll = document.querySelector("#clearButton");
 
 //functions 
-
-let taskList = [];
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -34,18 +33,40 @@ form.addEventListener('submit', function(event){
         toDoList.appendChild(newList);
 
         input.value = "";
-
+    
         deleteButton.addEventListener('click', function(){
             if (newList.style.textDecoration === "line-through"){
                 newList.remove();
             }
         })
-    
+
         clearAll.addEventListener('click', function(){
             newList.remove();
         })
     }
 })
+
+
+//Need to restructure code to wire up more function more clean 
+// Ver 2.0????
+// Edit works inside of "form" (fucntion) but with bugs
+
+/*
+
+        let editLi= false
+
+        editButton.addEventListener('click', function(){
+            editLi = true
+        })
+        newList.addEventListener('click', function(event){
+            if (editLi === true){
+                const edit = prompt('Edit:')
+                event.target.innerHTML = edit
+                editButton = fasle;           
+            }
+        })
+
+*/
 
 
 
