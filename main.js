@@ -6,7 +6,7 @@ let form = document.querySelector("form");
 //input
 let input = document.querySelector("#userInput");
 
-//to-DO list
+//to-DO list (Global)
 let toDoList = document.querySelector("#to-DoList");
 
 //buttons
@@ -68,7 +68,12 @@ form.addEventListener('submit', function(event){
 
 */
 
+// let deleteButt = document.createElement ('button');
+// deleteButt.innerText = 'Delete'
 
+// deleteButt.addEventListener('click', function (){
+//     listItem.remove();
+// })
 
   
 
